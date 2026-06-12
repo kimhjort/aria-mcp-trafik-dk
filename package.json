@@ -1,0 +1,49 @@
+{
+  "name": "aria-mcp-trafik-dk",
+  "version": "1.0.0",
+  "description": "MCP server for Danish road traffic events and roadworks via Vejdirektoratet (trafikkort.vejdirektoratet.dk GCS feed)",
+  "type": "module",
+  "bin": {
+    "aria-mcp-trafik-dk": "./dist/index.js"
+  },
+  "main": "./dist/index.js",
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "start": "node dist/index.js",
+    "test": "vitest run",
+    "prepublishOnly": "npm run build"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": [
+    "mcp",
+    "traffic",
+    "denmark",
+    "vejdirektoratet",
+    "roadworks",
+    "trafik",
+    "aria",
+    "model-context-protocol"
+  ],
+  "author": "Kim Hjort",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kimhjort/aria-mcp-trafik-dk"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.29",
+    "typescript": "^5.8.3",
+    "vitest": "^3.2.3"
+  }
+}
